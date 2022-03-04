@@ -2,6 +2,7 @@
 # Interview sample API
 
 This is a repository that uses Node.js and Express.js to create a simple API.
+
 You will need NodeJS >= 12.X to run and build this repository
 ## Setup
 
