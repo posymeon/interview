@@ -29,3 +29,7 @@ PORT=4002
 ### Build docker image 
 
 ``` docker build -t <image_name> . ```
+
+### Run Tests
+
+``` npm run test ```

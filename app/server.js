@@ -15,9 +15,9 @@ app.use(express.json());
 
 app.use(root_api, mathRoute);
 
-app.listen(env.port).on('listening', () => {
+const server = app.listen(env.port).on('listening', () => {
   console.log(`🚀 are live on ${env.port}`);
 });
 
 
-export default app;
+export default server;

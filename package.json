@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=dev nodemon --watch . --exec babel-node -- app/server.js ",
-    "build": "NODE_ENV=production ./node_modules/.bin/babel app -d build --extensions \".ts,.js\" --copy-files",
-    "clean": "rm -rf ./build"
+    "build": "npm run test && NODE_ENV=production ./node_modules/.bin/babel app -d build --extensions \".ts,.js\" --copy-files",
+    "clean": "rm -rf ./build",
+    "test": "mocha"
   },
   "type": "module",
   "author": "",
@@ -24,6 +25,9 @@
     "@babel/cli": "^7.14.5",
     "@babel/core": "^7.14.6",
     "@babel/node": "^7.14.7",
-    "@babel/preset-env": "^7.14.7"
+    "@babel/preset-env": "^7.14.7",
+    "chai": "^3.5.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^9.2.1"
   }
 }
