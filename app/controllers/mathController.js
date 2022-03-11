@@ -8,7 +8,7 @@
  */
  const sum = async (req, res) => {
   let errorMessage = {};
-  // const {boilerMake, boilerModel, capacity} = req.body;
+
   const {
     number1,
     number2,
@@ -16,7 +16,9 @@
 
 
   let sum = parseInt(number1) + parseInt(number2);
-  return res.send(JSON.stringify(sum));
+
+  let reply = sum; 
+  return res.status(200).send(JSON.stringify(reply));
 };
 
 /**
@@ -26,7 +28,7 @@
  * @returns {object} reflection object
  */
  const multiply = async (req, res) => {
-  // const {boilerMake, boilerModel, capacity} = req.body;
+
   const {
     number1,
     number2,
@@ -35,7 +37,7 @@
   let multiply = parseInt(number1) * parseInt(number2);
 
   let reply = multiply; 
-  return res.send(JSON.stringify(reply));
+  return res.status(200).send(JSON.stringify(reply));
 };
 
 
